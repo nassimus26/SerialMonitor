@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nassimus.SerialMonitor.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <MenuBar id="AppMenuBar" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+        <menus>
+          <Menu id="ConfigMenu" mnemonicParsing="false" text="Config">
+            <items>
+              <Menu id="ComPorts" mnemonicParsing="false" text="Com port" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+       <FlowPane GridPane.rowIndex="1">
+           <Text text="Send :" />
+           <TextField id="sendText" />
+           <Button id="clearButton" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Clear" textAlignment="CENTER" />
+           <Button id="connectToggleButton" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Connect" textAlignment="CENTER" />
+       </FlowPane>
+      <TextArea id="SerialLog" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+   </children>
+</GridPane>
